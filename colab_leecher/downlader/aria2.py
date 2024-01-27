@@ -85,7 +85,7 @@ async def on_output(output: str):
             total_size = total_size.split("(")[0]
             progress_percentage = parts[1][parts[1].find("(") + 1 : parts[1].find(")")]
             downloaded_bytes = parts[1].split("/")[0]
-            eta = parts[4].split(":")[1][:-1]
+            eta = parts[2].split(":")[1][:-1]
     except Exception as do:
         logging.error(f"Could't Get Info Due to: {do}")
 
